@@ -1,1 +1,1 @@
-get-help
+get-help get-command
