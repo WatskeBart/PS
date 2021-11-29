@@ -6,7 +6,7 @@ $mijnservices[0] | get-member #Laat alle beschikbare members zien van de eerste 
 
 $mijnservices[0].DisplayName #Laat de DisplayName zien van de eerste service, waarbij DisplayName een Property (member) is van de service
 
-$mijnservices | where {$_.Status -eq 'running'} #Laat alle services zien waar de status 'running' is
+$mijnservices | Where-Object {$_.Status -eq 'running'} #Laat alle services zien waar de status 'running' is
 
 $mijnservices | Sort-Object -Property Status -Descending #Sorteer alle services op de Property status aflopend
 
