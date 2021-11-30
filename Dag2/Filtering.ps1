@@ -4,6 +4,8 @@ Get-Service | Where-Object -Filter {$PSItem.Status -eq 'Running'} #Filter alle s
 
 Get-Service | ? {$_.Status -eq 'Running'} #Dezelfde filtering maar verkorte versie
 
-$mijnservices = Get-Service #Stop alle services in een variabele $mijnservices
+$mijnservices = Get-Service #Zet alle services in een variabele $mijnservices
 
-$mijnservices | ? {$_.Status -eq 'Running' -and $_.StartType -eq 'Automatic'}
+$mijnservices | ? {$_.Status -eq 'Running' -and $_.StartType -eq 'Automatic'} #Laat alle services zien met de Status 'Running' en de StartType 'Automatic'
+
+# $PSItem. is hetzelfde als $_.
