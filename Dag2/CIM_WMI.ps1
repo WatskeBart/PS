@@ -4,7 +4,7 @@ Get-CimClass -Namespace root/CIMV2 #Overzicht van classes uit root/CIMv2 (classe
 
 Get-CimClass *network* | Sort-Object CimClassName #Overzicht van alle classes welke het woord 'network' bevatten en gesorteerd op CimClassName
 
-(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).InvokeMethod("Win32Shutdown"0) #Gebruik de class Win32_OperatingSystem om de lokale computer uit te loggen
+(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).InvokeMethod("Win32Shutdown",0) #Gebruik de class Win32_OperatingSystem om de lokale computer uit te loggen
 (gwmi Win32_OperatingSystem).Win32Shutdown(0) #Verkorte variant van bovenstaande
 ## Overzicht van Flags
 # 0 – Log Off
