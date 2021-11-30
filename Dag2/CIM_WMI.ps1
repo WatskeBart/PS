@@ -16,3 +16,9 @@ Get-CimClass *network* | Sort-Object CimClassName #Overzicht van alle classes we
 # 8 – Power Off
 # 12 – Forced Power Off
 
+Get-WmiObject -Class Win32_OperatingSystem | Get-Member -MemberType Method #Overzicht van beschikbare methods binnen de class Win32_OperatingSystem
+Get-CimClass -ClassName Win32_OperatingSystem | Select-Object -ExpandProperty CimClassMethods #Overzicht van beschikbare methods via CIM
+
+Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine='mspaint.exe'} #Start MSPaint via Invoke-CimMethod
+Get-CimInstance -ClassName Win32_Process -Filter "Name='mspaint.exe'" | Invoke-CimMethod -Name Terminate #Overzicht van CimIntances en filter op mspaint.exe en sluit deze af via Invoke-CimMethod
+
