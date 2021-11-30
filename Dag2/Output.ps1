@@ -1,6 +1,6 @@
 Get-Service | Out-File alleservices-TXT.txt #Schrijf alle informatie van Get-Service naar een tekstbestand genaamd 'alleservices.txt'
 
-Get-Service > alleservices-TXT2.txt #Verkorte variant van bovenstaande
+Get-Service > alleservices-TXT2.txt #Verkorte variant van bovenstaande. Gebruik >> om info toe te voegen aan een bestaand bestand (append)
 
 Get-Service | Export-Csv alleservices-CSV.csv #Schrijf alle informatie van Get-Service naar een CSV (Comma Seperated Value) bestand
 
