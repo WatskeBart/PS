@@ -1,5 +1,6 @@
 Unblock-File #Verwijderd de downloaded status van een gedownload script
 
+#If Else statement (als dit, dan dat)
 $mijnservice = Get-Service -Name W32Time #Plaats de service W32Time in de variabele $mijnservice
 If ($mijnservice.Status -eq 'Running') {
     Write-Host "Mijn service is gestart"
