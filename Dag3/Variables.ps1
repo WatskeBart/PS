@@ -14,3 +14,7 @@ $var3.GetType() #Laat het type variabele zien, bijvoorbeeld String, Int32, Doubl
 
 [double]$var4 = 10.5 #Voorbeeld van het type Double (getal met decimalen)
 $var4 #Laat waarde zien van variabele $var4
+$var5 = $var4.ToString() #Zet de waarde van $var4 als type String in een nieuwe variabele $var5
+$var5.GetType() #Laat zien dat de waarde nu van het type String is
+
+$mijndatum = Get-Date #Stop de huidige datum tijd in een variabele $mijndatum
