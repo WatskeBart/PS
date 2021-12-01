@@ -22,3 +22,10 @@ Get-CimClass -ClassName Win32_OperatingSystem | Select-Object -ExpandProperty Ci
 Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine='mspaint.exe'} #Start MSPaint via Invoke-CimMethod
 Get-CimInstance -ClassName Win32_Process -Filter "Name='mspaint.exe'" | Invoke-CimMethod -Name Terminate #Overzicht van CimIntances en filter op mspaint.exe en sluit deze af via Invoke-CimMethod
 
+Get-WmiObject Win32_BIOS | Select-Object -Property * #Weergeven van alle Properties van de Class Win32_BIOS
+
+Get-WmiObject Win32_bios -PipelineVariable bios | 
+  foreach {
+   $props = $_.psobject.properties.name | Where-Object {$bios.$_}
+   $bios | select $props
+  } #Hetzelfde als het bovenstaande commando, maar laat alle lege velden weg in de output
