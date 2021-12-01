@@ -16,3 +16,8 @@ Switch ($choice) {
     3 { Write-Host "item 3" }
     Default { Write-Host "ongeldige optie" }
 }
+
+#Loop door nummers 1 t/m 10 en geeft een melding bij iedere iteratie
+For($i=1;$i -le 10; $i++){
+    Write-Host "Wij zijn bij stap $i"
+}
