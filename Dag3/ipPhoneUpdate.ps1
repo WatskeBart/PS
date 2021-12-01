@@ -1,0 +1,1 @@
+#ipPhone attribute in AD 
