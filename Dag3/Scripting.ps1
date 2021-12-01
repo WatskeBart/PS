@@ -9,7 +9,7 @@ If ($mijnservice.Status -eq 'Running') {
 } #Als de service gestart is geef dan een melding dat deze gestart is en anders een melding dat deze niet gestart is
 
 #Switch contstruct (keuze menu)
-$choice = Read-Host -Prompt "Kies 1, 2 of 3: "
+$choice = Read-Host -Prompt "Kies 1, 2 of 3: " #Plaats de keuze in de variabele $choice
 Switch ($choice) {
     1 { Write-Host "item 1" }
     2 { Write-Host "item 2" }
