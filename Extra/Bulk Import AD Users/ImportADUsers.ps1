@@ -33,7 +33,7 @@ write-host 'User Domain is: ' $UserDomain
 write-host 'OU pad is: ' $OUPath
 
 #Bevestigen van de ingegeven waarden om verder te gaan met het script.
-$confirmation = Read-Host "Kloppen deze gegevens? Typ 'correct' om door te gaan (zonder aanhalingstekens)"
+$confirmation = Read-Host "Kloppen deze gegevens? Typ 'correct' om door te gaan (zonder aanhalingstekens en hoofdlettergevoelig)"
 if ($confirmation -cne 'correct') {
     exit
 }
