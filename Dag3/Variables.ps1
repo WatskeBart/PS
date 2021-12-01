@@ -40,3 +40,4 @@ $mijnhashtable = @{
 $mijnhashtable.Add("Sleutel4","Waarde4") #Toevoegen van een Sleutel en Waarde aan een bestaande hashtable
 $mijnhashtable.Keys #Laat alleen alle Sleutels zien
 $mijnhashtable.Values #Laat alleen alle Waardes zien
+$mijnhashtable.Sleutel1 #Laat de waarde van Sleutel1 zien
