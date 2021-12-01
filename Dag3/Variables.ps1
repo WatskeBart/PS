@@ -19,3 +19,12 @@ $var5 = $var4.ToString() #Zet de waarde van $var4 als type String in een nieuwe 
 $var5.GetType() #Laat zien dat de waarde nu van het type String is
 
 $mijndatum = Get-Date #Stop de huidige datum tijd in een variabele $mijndatum
+$mijndatum.DayOfWeek #Laat de dag van de week zien
+
+$mijntekst = "Dit is mijn tekst. Fun fun fun!" #Zet tekst in een variabele
+$mijntekst.Split() #Splits de tekst in de variabele op (wanneer je niets ingeeft splits PS op spaties)
+$mijntekst.Split(".") #Splits de tekst in de variabele op gescheiden op de . (punt)
+
+$mijnarray = "dit", "dat", "zus", "zo" #Stop deze woorden in een variabele als een array (lijst)
+$mijnarray += "jassie kapot?" #Waarde toevoegen aan bestaande array
+$mijnarray[2] #Laat de 3e waarde van de array zien (een array begint met tellen vanaf 0)
