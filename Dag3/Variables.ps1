@@ -42,7 +42,11 @@ $mijnhashtable = @{
     "Sleutel3"="Waarde3"
 } #Aanmaken van een hashtable met meerdere Sleutel en Waardes
 $mijnhashtable.Add("Sleutel4","Waarde4") #Toevoegen van een Sleutel en Waarde aan een bestaande hashtable
+$mijnhashtable.Remove("Sleutel2")
 $mijnhashtable.Keys #Laat alleen alle Sleutels zien
 $mijnhashtable.Values #Laat alleen alle Waardes zien
 $mijnhashtable.Sleutel1 #Laat de waarde van Sleutel1 zien
 $mijnhashtable.Sleutel1="AangepasteWaarde" #Direct een waarde aanpassen van een sleutel (Key)
+
+#Om de members te bekijken van je variabele, kun je de variabele invoeren bijv. $mijnhashtable. gevolgd door CTRL+SPATIE
+#Nu kun je dmv de pijltjestoetsen door de members heen bladeren en selecteren
