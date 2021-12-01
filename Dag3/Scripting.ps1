@@ -42,3 +42,7 @@ $selectservice #Toon de waarde van variabele $selectservice
 #Breakpoints in een script
 Set-PSBreakpoint -Line 2 -Script "MijnScript.ps1" #Zet een breakpoint (pauze) op regel 2 van MijnScript.ps1
 Set-PSBreakpoint -Command "Set-ADUser" -Script MijnScript.ps1 #Zet een breakpoint (pauze) op het eerste cmdlet "Set-ADUser" van MijnScript.ps1
+
+Get-Service -ErrorAction Stop #Stop het uitvoeren van het commando zodra er een error optreedt
+
+$ErrorActionPreference = 'Stop' #Zet dit bovenin je script om het script te stoppen, zodra er een error optreedt
