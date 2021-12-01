@@ -30,4 +30,11 @@ $mijnarray = "dit", "dat", "zus", "zo" #Stop deze woorden in een variabele als e
 $mijnarray += "jassie kapot?" #Waarde toevoegen aan bestaande array
 $mijnarray[2] #Laat de 3e waarde van de array zien (een array begint met tellen vanaf 0)
 $mijnarray | Get-Member #Laat zien welke Methods en Properties de array beschikbaar heeft
-$mijnarray.ToUpper() #Verander alle waarde in de array naar hoofdletters
+$mijnarray.ToUpper() #Verander alle waardes in de array naar hoofdletters
+
+$mijnhashtable = @{
+    "Key1"="Waarde1";
+    "Key2"="Waarde2";
+    "Key3"="Waarde3"
+} #Aanmaken van een hashtable met meerdere Key en Waardes
+$mijnhashtable.Add("Key4","Waarde4") #Toevoegen van een Key en Waarde aan een bestaande hashtable
