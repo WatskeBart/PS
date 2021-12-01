@@ -3,6 +3,6 @@ PowerShell Cursus
 
 Verzameling van alle scripts gemaakt tijdens de PS cursus  
 
-Gebruik bijvoorbeeld Microsoft Visual Code om de scripts te bewerken en uit te voeren.  
+Gebruik bijvoorbeeld [Microsoft Visual Studio Code](https://code.visualstudio.com/ "VS Code website") om de scripts te bewerken en uit te voeren.  
 In VS Code kun je regels selecteren en met F8 de geselecteerde code uitvoeren.  
 Met F5 kun je het gehele script uitvoeren.  
