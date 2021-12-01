@@ -46,3 +46,6 @@ Set-PSBreakpoint -Command "Set-ADUser" -Script MijnScript.ps1 #Zet een breakpoin
 Get-Service -ErrorAction Stop #Stop het uitvoeren van het commando zodra er een error optreedt
 
 $ErrorActionPreference = 'Stop' #Zet dit bovenin je script om het script te stoppen, zodra er een error optreedt
+
+#Dot sourcing, om bijvoorbeeld een functie in een PowerShell sessie te laden
+. C:\MijnFunctie.ps1 #Hiermee laad je MijnFunctie.ps1 in je huidige sessie. Nu kun je de huidige sessie deze functie aanroepen
