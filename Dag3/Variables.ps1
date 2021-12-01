@@ -32,6 +32,9 @@ $mijnarray[2] #Laat de 3e waarde van de array zien (een array begint met tellen 
 $mijnarray | Get-Member #Laat zien welke Methods en Properties de array beschikbaar heeft
 $mijnarray = $mijnarray.ToUpper() #Verander alle waardes in de array naar hoofdletters en schrijf dit weer naar de variabele $mijnarray
 $mijnarray = $mijnarray[3].Replace("Z","z")
+#Wanneer een array een fixed size heeft, kun je alleen items toevoegen dmv $mijnarray += "toe te voegen tekst"
+#Bij een array zonder fixed size kun je items toevoegen dmv $mijnarray.Add("toe te voegen tekst")
+#Een non-fixed array maak je aan dmv [System.Collections.ArrayList]$mijnarray="Item1","Item2"
 
 $mijnhashtable = @{
     "Sleutel1"="Waarde1";
