@@ -21,3 +21,15 @@ Switch ($choice) {
 For($i=1;$i -le 10; $i++){
     Write-Host "Wij zijn bij stap $i"
 }
+
+#Voorbeeld van Continue (sla een iteratie over, in dit voorbeeld stap 6)
+For($i=1;$i -le 10; $i++){
+    If ($i -eq 6) {Continue}
+    Write-Host "Wij zijn bij stap $i"
+}
+
+#Voorbeeld van Break (stop de loop bij stap 7)
+For($i=1;$i -le 10; $i++){
+    If ($i -eq 7) {Break}
+    Write-Host "Wij zijn bij stap $i"
+}
