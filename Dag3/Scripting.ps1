@@ -39,3 +39,6 @@ $mijnservices = Get-Service #Plaats alle services in de variabele $mijnservices
 $selectservice = $mijnservices | Out-GridView -PassThru #Open de inhoud van de variabele $mijnservices in een GUI tabel en plaats de gekozen service terug in de variabele $selectservice
 $selectservice #Toon de waarde van variabele $selectservice
 
+#Breakpoints in een script
+Set-PSBreakpoint -Line 2 -Script "MijnScript.ps1" #Zet een breakpoint (pauze) op regel 2 van MijnScript.ps1
+Set-PSBreakpoint -Command "Set-ADUser" -Script MijnScript.ps1 #Zet een breakpoint (pauze) op het eerste cmdlet "Set-ADUser" van MijnScript.ps1
