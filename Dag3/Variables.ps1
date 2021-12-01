@@ -33,8 +33,10 @@ $mijnarray | Get-Member #Laat zien welke Methods en Properties de array beschikb
 $mijnarray.ToUpper() #Verander alle waardes in de array naar hoofdletters
 
 $mijnhashtable = @{
-    "Key1"="Waarde1";
-    "Key2"="Waarde2";
-    "Key3"="Waarde3"
-} #Aanmaken van een hashtable met meerdere Key en Waardes
-$mijnhashtable.Add("Key4","Waarde4") #Toevoegen van een Key en Waarde aan een bestaande hashtable
+    "Sleutel1"="Waarde1";
+    "Sleutel2"="Waarde2";
+    "Sleutel3"="Waarde3"
+} #Aanmaken van een hashtable met meerdere Sleutel en Waardes
+$mijnhashtable.Add("Sleutel4","Waarde4") #Toevoegen van een Sleutel en Waarde aan een bestaande hashtable
+$mijnhashtable.Keys #Laat alleen alle Sleutels zien
+$mijnhashtable.Values #Laat alleen alle Waardes zien
