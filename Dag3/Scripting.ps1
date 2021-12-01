@@ -33,3 +33,9 @@ For($i=1;$i -le 10; $i++){
     If ($i -eq 7) {Break}
     Write-Host "Wij zijn bij stap $i"
 }
+
+#Voorbeeld Out-GridView
+$mijnservices = Get-Service #Plaats alle services in de variabele $mijnservices
+$selectservice = $mijnservices | Out-GridView -PassThru #Open de inhoud van de variabele $mijnservices in een GUI tabel en plaats de gekozen service terug in de variabele $selectservice
+$selectservice #Toon de waarde van variabele $selectservice
+
