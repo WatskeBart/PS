@@ -1,6 +1,33 @@
-## Importeer gebruikers vanuit een CSV bestand.
-## Zie voorbeeld CSV bestand (Gebruikers.csv)
-## Start het script met parameters -CSVFile -UserDomain -OUPath, en de bijbehorende waarden of start het script zonder parameters en deze zullen dan interactief gevraagd worden.
+<#
+.SYNOPSIS
+    Dit script importeert alle gebruikers uit een CSV bestand in Active Directory
+
+.DESCRIPTION
+    Dit script is ontwikkeld om makkelijk grote hoeveelheden gebruikers te importeren in Active Directory.
+    Er is tevens een voorbeeld bestand (Gebruikers.csv) welke als sjabloon gebruikt kan worden.
+
+.PARAMETER -CSVFile
+    Ingeven van het pad naar het CSV bestand
+
+.PARAMETER -UserDomain
+    Ingeven van het UserDomain
+
+.PARAMETER -OUPath
+    Ingeven van de gewenste OU
+
+.EXAMPLE
+    ImportADUsers.ps1 -CSVFile "C:\Gebruikers.csv" -UserDomain "mijndomein.com" -OUPath "CN=Users,DC=mijndomeinn,DC=com"
+
+.EXAMPLE
+    ImportADUsers.ps1
+    Wanneer je het script start zonder parameters, zullen de verplichte parameters interactief gevraagd worden.
+
+.NOTES
+    Auteur: WatskeBart
+    Laatst bijgewerkt: 2021-12-01
+    Versie 1.0 - Initiele versie
+
+#>
 
 #Bepaalde parameters verplichten voor de werking van het script.
 param (
