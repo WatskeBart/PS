@@ -10,5 +10,7 @@ Invoke-Command -ScriptBlock {
     -Root $r
 }
 -ComputerName PC1, PC2
--ArgumentList (Get-Credential), 'Path'
+-ArgumentList (Get-Credential), 'Path' #Deze waarden worden meegegeven in het scriptblock als variabele $c (Get-Credential) en $r ('Path')
 
+$ps = "Windows Powershell" #Instellen van variabele $ps
+Invoke-Command -ComputerName PC1 -ScriptBlock {Get-WinEvent -LogName $Using:ps} #Voer commando uit op remote machine en gebruik een lokale variabele ($ps) in het ScriptBlock
