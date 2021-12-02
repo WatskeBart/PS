@@ -4,4 +4,4 @@
 
 # PowerShell splatting
 
-[Artikel over het splatten van parameters](#https://jeffbrown.tech/powershell-splatting/)
+[Artikel over het splatten van parameters](https://jeffbrown.tech/powershell-splatting/)
