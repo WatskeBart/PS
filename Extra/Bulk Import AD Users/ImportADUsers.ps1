@@ -30,7 +30,7 @@
 #>
 
 #Bepaalde parameters verplichten voor de werking van het script.
-param (
+Param (
     [Parameter(Mandatory = $true)][string]$CSVFile,
     [Parameter(Mandatory = $true)][string]$UserDomain,
     [Parameter(Mandatory = $true)][string]$OUPath
@@ -44,14 +44,14 @@ If (-not $CheckCSV) { Write-Host -BackgroundColor Black -ForegroundColor Yellow 
 
 #Controleer of het opgegeven OU pad geldig is.
 [string] $Path = $OUPath
-try {
+Try {
     $ou_exists = [adsi]::Exists("LDAP://$Path")
 }
-catch {
+Catch {
     Throw("Het opgegeven OU pad is ongeldig.`n$_")
 }
 
-if (-not $ou_exists) {
+If (-not $ou_exists) {
     Throw('Het opgegeven OU pad bestaat niet..')
 }
 
@@ -62,7 +62,7 @@ write-host 'OU pad is: ' $OUPath
 
 #Bevestigen van de ingegeven waarden om verder te gaan met het script.
 $confirmation = Read-Host "Kloppen deze gegevens? Typ 'correct' om door te gaan (zonder aanhalingstekens en hoofdlettergevoelig)"
-if ($confirmation -cne 'correct') {
+If ($confirmation -cne 'correct') {
     exit
 }
 
@@ -78,7 +78,7 @@ Import-Module activedirectory
 $ADUsers = Import-csv $CSVFile
 
 #Herhaal alle onderstaande stappen voor iedere gebruiker in de variabele $ADUsers
-foreach ($User in $ADUsers) {
+ForEach ($User in $ADUsers) {
 		
     $Username = $User.username
     $Password = $User.password
@@ -91,11 +91,11 @@ foreach ($User in $ADUsers) {
 
 
     #Controleer of gebruiker al bestaat
-    if (Get-ADUser -F { SamAccountName -eq $Username }) {
+    If (Get-ADUser -F { SamAccountName -eq $Username }) {
         #Waarschuwing tonen als de gebruiker bestaat
         Write-Warning "De gebruiker met gebruikersnaam $Username bestaat al."
     }
-    else {		
+    Else {		
         #Accounts worden aangemaakt in het OU zoals aangegeven in de variable $OUPath
         $ADdata = @{
             SamAccountName = $Username;
