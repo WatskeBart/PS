@@ -14,7 +14,7 @@ foreach ($disk in $disks) {
         Write-Host -BackgroundColor Red "Schijfruimte kritiek op: $($disk.DriveLetter) Vrije ruimte: $([math]::Round($disk.SizeRemaining / 1GB))GB"
     }
     elseif ($disk.SizeRemaining -le 20GB) {
-        Write-Host -BackgroundColor Yellow "Niet genoeg ruimte op: $($disk.DriveLetter) Vrije ruimte: $([math]::Round($disk.SizeRemaining / 1GB))GB"
+        Write-Host -ForegroundColor Black -BackgroundColor Yellow "Niet genoeg ruimte op: $($disk.DriveLetter) Vrije ruimte: $([math]::Round($disk.SizeRemaining / 1GB))GB"
     }
     elseif ($disk.SizeRemaining -ge 20GB) {
         Write-Host -BackgroundColor Blue "Genoeg ruimte op: $($disk.DriveLetter) Vrije ruimte: $([math]::Round($disk.SizeRemaining / 1GB))GB"
