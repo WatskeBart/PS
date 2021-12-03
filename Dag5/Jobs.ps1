@@ -14,4 +14,4 @@ Write-Host "Job is klaar" <#Geef de tekst "Job is klaar" weer als de Job is afge
 }
 
 Receive-Job -Name MijnJob #Haal de eventuele output op van jouw Job, in dit geval "Job is klaar"
-#Wanneer je nu het commando Get-Job uitvoerd, zie je in de kolom HasMoreData False staan. Dit geeft aan dat de output als eerder is opgevraagd.
+#Wanneer je nu het commando Get-Job uitvoerd, zie je in de kolom HasMoreData False staan. Dit geeft aan dat de output als eerder is
