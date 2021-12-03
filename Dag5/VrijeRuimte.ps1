@@ -5,6 +5,8 @@
 #Geef een output in het geel bij vrije ruimte minder dan 10GB
 #Zorg dat in de output de driveletters in oplopende volgorde worden weergegeven
 
+Clear-Host
+
 $disks = Get-Volume | Where-Object { $_.FileSystemType -eq "NTFS" -and $_.DriveLetter -ne $null } | Sort-Object -Property DriveLetter
 
 foreach ($disk in $disks) {
