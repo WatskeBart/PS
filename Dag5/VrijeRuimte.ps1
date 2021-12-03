@@ -8,13 +8,13 @@
 $disks = Get-Volume | Where-Object { $_.FileSystemType -eq "NTFS" -and $_.DriveLetter -ne $null } | Sort-Object -Property DriveLetter
 
 foreach ($disk in $disks) {
-    If ($disk.SizeRemaining -ge 20GB) {
-        Write-Host -BackgroundColor Blue "Genoeg ruimte op: $($disk.DriveLetter), namelijk: $([math]::Round($disk.SizeRemaining / 1GB))GB"
-    }
-    elseif ($disk.SizeRemaining -le 10GB) {
+    if ($disk.SizeRemaining -le 10GB) {
         Write-Host -BackgroundColor Red "Schijfruimte kritiek op: $($disk.DriveLetter), namelijk: $([math]::Round($disk.SizeRemaining / 1GB))GB"
     }
     elseif ($disk.SizeRemaining -le 20GB) {
         Write-Host -BackgroundColor Yellow "Niet genoeg ruimte op: $($disk.DriveLetter), namelijk: $([math]::Round($disk.SizeRemaining / 1GB))GB"
+    }
+    elseif ($disk.SizeRemaining -ge 20GB) {
+        Write-Host -BackgroundColor Blue "Genoeg ruimte op: $($disk.DriveLetter), namelijk: $([math]::Round($disk.SizeRemaining / 1GB))GB"
     }
 }
