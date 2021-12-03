@@ -97,20 +97,23 @@ foreach ($User in $ADUsers) {
     }
     else {		
         #Accounts worden aangemaakt in het OU zoals aangegeven in de variable $OUPath
-        New-ADUser `
-            -SamAccountName $Username `
-            -UserPrincipalName "$Username@$UserDomain" `
-            -Name "$Firstname $Lastname" `
-            -GivenName $Firstname `
-            -Surname $Lastname `
-            -Enabled $True `
-            -DisplayName "$Lastname, $Firstname" `
-            -Path $OUPath `
-            -Company $company `
-            -OfficePhone $telephone `
-            -EmailAddress $email `
-            -Department $department `
-            -AccountPassword (convertto-securestring $Password -AsPlainText -Force) -ChangePasswordAtLogon $True
+        $ADdata = @{
+            SamAccountName = $Username
+            UserPrincipalName = "$Username@$UserDomain"
+            Name = "$Firstname $Lastname"
+            GivenName = $Firstname
+            Surname = $Lastname
+            Enabled = $True
+            DisplayName = "$Lastname, $Firstname"
+            Path = $OUPath
+            Company = $company
+            OfficePhone = $telephone
+            EmailAddress = $email
+            Department = $department
+            AccountPassword = (convertto-securestring $Password -AsPlainText -Force)
+            ChangePasswordAtLogon = $True
+        }
+        New-ADUser @ADdata
             
     }
 }
