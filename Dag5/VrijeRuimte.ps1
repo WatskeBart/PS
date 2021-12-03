@@ -20,3 +20,7 @@ foreach ($disk in $disks) {
         Write-Host -BackgroundColor Blue "Genoeg ruimte op: $($disk.DriveLetter) Vrije ruimte: $([math]::Round($disk.SizeRemaining / 1GB))GB"
     }
 }
+
+#Variaties
+#Write-Output om de output terug te krijgen op je lokale machine, wanneer de het script remote uitvoerd
+#Write-Warning ipv Write-Host
